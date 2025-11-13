@@ -1,6 +1,5 @@
 import java.io.FileOutputStream;
 
-
 /**
  * This implementation of a pill counter has a built-in logging capability.
  * Every change to the count of pills is written to a log file.
@@ -8,7 +7,6 @@ import java.io.FileOutputStream;
  * <p>THIS FILE EXISTS IN LEGACY CODE. YOU DO NOT HAVE THE CORRECT
  * PRIVILEGES TO EDIT THIS FILE TO IMPROVE IT.
  */
-
 public class LoggingPillCounter implements PillCounter {
   private int count;
 
