@@ -10,14 +10,9 @@ public class BatchAddingPillCounterTest {
 
   @Test
   public void testBatchAddingDecorator() {
-    long startTime = System.currentTimeMillis();
-
     PillCounter counter = new BatchAddingPillCounterDecorator(new LoggingPillCounter());
     boolean result = conveyerBelt(counter);
     assertTrue(result);
-
-    long endTime = System.currentTimeMillis();
-    System.out.println("Test completed in " + (endTime - startTime) + " ms");
   }
 
   private boolean conveyerBelt(PillCounter counter) {

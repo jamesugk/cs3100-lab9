@@ -22,22 +22,19 @@ public class MonitoringPillCounterTest {
     System.out.println("Total bottles processed: " + addCounts.size());
 
     System.out.println("First 10 bottles (100 pills each, 1 at a time):");
-    for (int i = 0; i < Math.min(10, addCounts.size()); i++) {
-      System.out.println("  Bottle " + (i + 1) + ": " + addCounts.get(i) + " addPill() calls");
+    for (int idx = 0; idx < Math.min(10, addCounts.size()); idx++) {
+      System.out.println("Bottle " + (idx + 1) + ": " + addCounts.get(idx) + " addPill() calls");
     }
 
     System.out.println("Bottles 101-110 (20 pills each, 4 at a time):");
-    for (int i = 100; i < Math.min(110, addCounts.size()); i++) {
-      System.out.println("  Bottle " + (i + 1) + ": " + addCounts.get(i) + " addPill() calls");
+    for (int idx = 100; idx < Math.min(110, addCounts.size()); idx++) {
+      System.out.println("Bottle " + (idx + 1) + ": " + addCounts.get(idx) + " addPill() calls");
     }
 
     System.out.println("Bottles 1101-1110 (200 pills each, 2 at a time):");
-    for (int i = 1100; i < Math.min(1110, addCounts.size()); i++) {
-      System.out.println("  Bottle " + (i + 1) + ": " + addCounts.get(i) + " addPill() calls");
+    for (int idx = 1100; idx < Math.min(1110, addCounts.size()); idx++) {
+      System.out.println("Bottle " + (idx + 1) + ": " + addCounts.get(idx) + " addPill() calls");
     }
-
-    int totalCalls = addCounts.stream().mapToInt(Integer::intValue).sum();
-    System.out.println("Total addPill() calls: " + totalCalls);
   }
 
   private boolean conveyerBelt(PillCounter counter) {
